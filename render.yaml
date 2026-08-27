@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: onplus-backend
+    env: docker
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
